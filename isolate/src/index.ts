@@ -141,7 +141,7 @@ export type OuterSo<ISo> = {
 
 export type OuterSi<ISo, ISi> = {
   [K in keyof ISo & keyof ISi]: ISo[K] extends IsolateableSource
-    ? ReturnType<ISo[K]['isolateSink']>
+    ? any // ReturnType<ISo[K]['isolateSink']>   <- This does not work for e.g. @cycle/state
     : ISi[K]
 } &
   {[K in Exclude<keyof ISi, keyof ISo>]: ISi[K]};

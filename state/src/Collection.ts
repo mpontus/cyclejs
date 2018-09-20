@@ -195,7 +195,7 @@ export function makeCollection<S, So = any, Si = any>(
                 typeof otherScopes === 'string'
                   ? {'*': otherScopes, [name]: onionScope}
                   : {...otherScopes, [name]: onionScope};
-              const sinks = isolate(itemComp, scopes)(sources);
+              const sinks: any = isolate(itemComp, scopes)(sources);
               dict.set(key, sinks);
               nextInstArray[i] = sinks;
             } else {
@@ -220,7 +220,7 @@ export function makeCollection<S, So = any, Si = any>(
             typeof otherScopes === 'string'
               ? {'*': otherScopes, [name]: onionScope}
               : {...otherScopes, [name]: onionScope};
-          const sinks = isolate(itemComp, scopes)(sources);
+          const sinks: any = isolate(itemComp, scopes)(sources);
           dict.set(key, sinks);
           return {dict: dict, arr: [sinks]};
         }

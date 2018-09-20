@@ -108,6 +108,44 @@ describe('onionify', function() {
     setImmediate(done);
   });
 
+  it('should compile with type annotations', () => {
+    interface State {
+      foo: string;
+    }
+
+    interface Parent {
+      bar: number;
+      child: {foo: number};
+    }
+
+    interface Sources {
+      state: StateSource<State>;
+    }
+    interface Sinks {
+      state?: Stream<Reducer<State>>;
+    }
+
+    interface ParentSources {
+      state: StateSource<Parent>;
+    }
+    interface ParentSinks {
+      state?: Stream<Reducer<Parent>>;
+    }
+
+    function Child(sources: Sources): Sinks {
+      return {
+        state: xs.of(() => ({foo: 'Hello'})),
+      };
+    }
+
+    function Parent(sources: ParentSources): ParentSinks {
+      const childSinks = isolate(Child, {state: 'child'})(sources);
+      return {
+        state: childSinks.state,
+      };
+    }
+  });
+
   it('reducers receive previous state', done => {
     const expected = [7, 10, 15, 25];
     function main(sources: {onion: StateSource<any>}) {
