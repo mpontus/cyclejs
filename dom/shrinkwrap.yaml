@@ -1,5 +1,5 @@
 dependencies:
-  '@cycle/run': 4.4.0
+  '@cycle/run': 5.0.0-rc.0
   snabbdom: 0.7.2
   snabbdom-selector: 3.0.0
   xstream: 11.7.0
@@ -29,7 +29,7 @@ devDependencies:
   symbol-observable: 1.2.0
   ts-node: 7.0.1
   tslint: 5.11.0
-  typescript: 2.8.4
+  typescript: 3.0.3
 packages:
   /@cycle/isolate/3.4.0:
     dependencies:
@@ -44,10 +44,20 @@ packages:
     dependencies:
       quicktask: 1.1.0
       xstream: 11.7.0
+    dev: true
     engines:
       node: '>=0.12.0'
     resolution:
       integrity: sha512-vVxnTqKKlgasE+we9X2z3og8z5KouO2RMiIgHWkVek+NomsdaeZwfvbutqzm3VToEImaz0DE2Iln9AxtCOVjpQ==
+  /@cycle/run/5.0.0-rc.0:
+    dependencies:
+      quicktask: 1.1.0
+      xstream: 11.7.0
+    dev: false
+    engines:
+      node: '>=0.12.0'
+    resolution:
+      integrity: sha512-aIH5JMw219EJmk6LSvZWmxWFayagfBrabWlAkMiNeIovczJQ64HoixbfkGcdkCQXiReHzpjipwksMhAgN9NlrQ==
   /@cycle/rxjs-run/9.2.0:
     dependencies:
       '@cycle/run': 4.4.0
@@ -3515,13 +3525,13 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-HRkVv/5qY2G6I8iab9cI7v1bOIdhm94dVjQCPFElW9W+3GeDOSHmy2EBYe4VTApuzolPcmgFTN3ftVJRKR2J9Q==
-  /typescript/2.8.4:
+  /typescript/3.0.3:
     dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-IIU5cN1mR5J3z9jjdESJbnxikTrEz3lzAw/D0Tf45jHpBp55nY31UkUvmVHoffCfKHTqJs3fCLPDxknQTTFegQ==
+      integrity: sha512-kk80vLW9iGtjMnIv11qyxLqZm20UklzuR2tL0QAnDIygIUIemcZMxlMWudl9OOt76H3ntVzcTiddQ1/pAAJMYg==
   /uglify-js/2.8.29:
     dependencies:
       source-map: 0.5.7
@@ -3743,7 +3753,7 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@cycle/isolate': '3.4'
-  '@cycle/run': '*'
+  '@cycle/run': ^5.0.0-rc.0
   '@cycle/rxjs-run': 9.2.0
   '@types/mocha': ^5.2.5
   '@types/node': ^10.7.1
@@ -3770,5 +3780,5 @@ specifiers:
   symbol-observable: ^1.2.0
   ts-node: ^7.0.1
   tslint: ^5.11.0
-  typescript: 2.8.x
+  typescript: ^3.0.3
   xstream: '*'
