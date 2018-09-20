@@ -15,13 +15,12 @@
   "bugs": "https://github.com/cyclejs/cyclejs/issues",
   "homepage": "https://cycle.js.org",
   "dependencies": {
-    "@cycle/run": "*",
+    "@cycle/run": "^5.0.0",
     "@types/history": "^4.6.2",
     "history": "4.7.x",
     "xstream": "*"
   },
   "devDependencies": {
-    "@cycle/run": "4.0.0",
     "@cycle/rxjs-run": "8.0.0",
     "@types/mocha": "^5.2.2",
     "@types/node": "^10.3.4",
@@ -38,7 +37,7 @@
     "sinon": "^6.0.0",
     "ts-node": "^6.1.1",
     "tslint": "^5.11.0",
-    "typescript": "2.8.4",
+    "typescript": "3.0.x",
     "xstream": "11.x"
   },
   "scripts": {
