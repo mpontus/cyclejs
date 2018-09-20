@@ -30,11 +30,14 @@ describe('run', function() {
   });
 
   it('should return a dispose function', function() {
-    const sandbox = sinon.sandbox.create();
+    const sandbox = sinon.createSandbox();
     const spy = sandbox.spy();
     function app(sources: any): any {
       return {
-        other: sources.other.pipe(take(1), startWith('a')),
+        other: sources.other.pipe(
+          take(1),
+          startWith('a')
+        ),
       };
     }
     function driver() {
@@ -47,7 +50,7 @@ describe('run', function() {
   });
 
   it('should report main() errors in the console', function(done) {
-    const sandbox = sinon.sandbox.create();
+    const sandbox = sinon.createSandbox();
     sandbox.stub(console, 'error');
 
     function main(sources: any): any {
@@ -57,7 +60,7 @@ describe('run', function() {
         delay(10),
         map(() => {
           throw new Error('malfunction');
-        }),
+        })
       );
 
       return {
@@ -84,7 +87,7 @@ describe('run', function() {
       sinon.assert.calledOnce(console.error as any);
       sinon.assert.calledWithExactly(
         console.error as any,
-        sinon.match((err: any) => err.message === 'malfunction'),
+        sinon.match((err: any) => err.message === 'malfunction')
       );
 
       // Should be false because the error was already reported in the console.

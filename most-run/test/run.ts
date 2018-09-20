@@ -29,7 +29,7 @@ describe('run()', function() {
   });
 
   it('should return a dispose function', function() {
-    const sandbox = sinon.sandbox.create();
+    const sandbox = sinon.createSandbox();
     const spy = sandbox.spy();
     function app(sources: any) {
       return {
@@ -48,7 +48,7 @@ describe('run()', function() {
   });
 
   it('should report errors from main() in the console', function(done) {
-    const sandbox = sinon.sandbox.create();
+    const sandbox = sinon.createSandbox();
     sandbox.stub(console, 'error');
 
     function main(sources: any): any {
@@ -78,7 +78,7 @@ describe('run()', function() {
       sinon.assert.calledOnce(console.error as any);
       sinon.assert.calledWithExactly(
         console.error as any,
-        sinon.match((err: any) => err.message === 'malfunction'),
+        sinon.match((err: any) => err.message === 'malfunction')
       );
 
       // Should be false because the error was already reported in the console.

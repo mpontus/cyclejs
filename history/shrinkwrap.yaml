@@ -1,8 +1,9 @@
 dependencies:
+  '@cycle/run': 4.4.0
   '@types/history': 4.7.0
   history: 4.7.2
+  xstream: 11.7.0
 devDependencies:
-  '@cycle/run': 4.4.0
   '@cycle/rxjs-run': 8.0.0
   '@types/mocha': 5.2.5
   '@types/node': 10.5.7
@@ -20,13 +21,11 @@ devDependencies:
   ts-node: 6.2.0
   tslint: 5.11.0
   typescript: 2.8.4
-  xstream: 11.7.0
 packages:
   /@cycle/run/4.4.0:
     dependencies:
       quicktask: 1.1.0
       xstream: 11.7.0
-    dev: true
     engines:
       node: '>=0.12.0'
     resolution:
@@ -3135,7 +3134,6 @@ packages:
     resolution:
       integrity: sha1-sgmEkgO7Jd+CDadW50cAWHhSFiA=
   /quicktask/1.1.0:
-    dev: true
     resolution:
       integrity: sha512-b3w19IEXnt5auacLAbePVsqPyVQUwmuhJQrrWnVhm4pP8PAMg2U9vFHbAD9XYXXbMDjdLJs0x5NLqwTV8uFK4g==
   /randomatic/3.0.0:
@@ -3849,7 +3847,6 @@ packages:
     resolution:
       integrity: sha1-g0D8RwLDEi310iKI+IKD9RPT/dQ=
   /symbol-observable/1.2.0:
-    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -4246,7 +4243,6 @@ packages:
   /xstream/11.7.0:
     dependencies:
       symbol-observable: 1.2.0
-    dev: true
     resolution:
       integrity: sha512-wO3TXiQd2/1UZNVsixDIcQgAN6TU4sGH7qIXvs1CRp1kgtkpU8YTfyKt/z/Z1psqcGnR0cJJxHaCnBxtktLx9w==
   /xtend/4.0.1:

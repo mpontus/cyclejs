@@ -27,7 +27,7 @@
   "bugs": "https://github.com/cyclejs/cyclejs/issues",
   "homepage": "https://cycle.js.org",
   "dependencies": {
-    "@cycle/run": "4.x",
+    "@cycle/run": "^5.0.0-rc.0",
     "most": "*",
     "xstream": "*"
   },

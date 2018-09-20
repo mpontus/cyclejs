@@ -1,9 +1,10 @@
 dependencies:
+  '@cycle/run': 4.4.0
   '@types/superagent': 3.8.2
   superagent: 3.8.3
+  xstream: 11.7.0
 devDependencies:
   '@cycle/isolate': 3.4.0
-  '@cycle/run': 4.4.0
   '@cycle/rxjs-run': 8.1.0
   '@types/body-parser': 1.17.0
   '@types/cookie-parser': 1.4.1
@@ -26,7 +27,6 @@ devDependencies:
   ts-node: 7.0.0
   tslint: 5.11.0
   typescript: 2.8.4
-  xstream: 11.7.0
 packages:
   /@cycle/isolate/3.4.0:
     dependencies:
@@ -41,7 +41,6 @@ packages:
     dependencies:
       quicktask: 1.1.0
       xstream: 11.7.0
-    dev: true
     engines:
       node: '>=0.12.0'
     resolution:
@@ -2863,7 +2862,6 @@ packages:
     resolution:
       integrity: sha1-sgmEkgO7Jd+CDadW50cAWHhSFiA=
   /quicktask/1.1.0:
-    dev: true
     resolution:
       integrity: sha512-b3w19IEXnt5auacLAbePVsqPyVQUwmuhJQrrWnVhm4pP8PAMg2U9vFHbAD9XYXXbMDjdLJs0x5NLqwTV8uFK4g==
   /randombytes/2.0.6:
@@ -3513,7 +3511,6 @@ packages:
     resolution:
       integrity: sha1-g0D8RwLDEi310iKI+IKD9RPT/dQ=
   /symbol-observable/1.2.0:
-    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -3866,7 +3863,6 @@ packages:
   /xstream/11.7.0:
     dependencies:
       symbol-observable: 1.2.0
-    dev: true
     resolution:
       integrity: sha512-wO3TXiQd2/1UZNVsixDIcQgAN6TU4sGH7qIXvs1CRp1kgtkpU8YTfyKt/z/Z1psqcGnR0cJJxHaCnBxtktLx9w==
   /xtend/4.0.1:

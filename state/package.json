@@ -27,8 +27,8 @@
   "typings": "lib/cjs/index.d.ts",
   "types": "lib/cjs/index.d.ts",
   "dependencies": {
-    "@cycle/run": "*",
     "@cycle/isolate": ">=3",
+    "@cycle/run": "^5.0.0-rc.0",
     "quicktask": "1.1.0",
     "xstream": ">=10"
   },
@@ -38,8 +38,8 @@
     "@types/node": "10.5.x",
     "@types/sinon": "1.16.x",
     "mocha": "^5.2.0",
-    "rxjs": "5.1.0",
     "most": "1.5.0",
+    "rxjs": "5.1.0",
     "ts-node": "^7.0.0",
     "tslint": "^5.11.0",
     "typescript": "3.0.x"

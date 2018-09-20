@@ -1,13 +1,8 @@
 import {Stream} from 'xstream';
 import * as most from 'most';
 import {Stream as MostStream} from 'most';
-import {setAdapt} from '../../run/src/adapt';
-import {
-  setup as coreSetup,
-  DisposeFunction,
-  Drivers,
-  Main,
-} from '../../run/src/index';
+import {setAdapt} from '@cycle/run/lib/adapt';
+import {setup as coreSetup, DisposeFunction, Drivers, Main} from '@cycle/run';
 
 export type MainOutputs<M extends Main> = {
   [k in string & keyof ReturnType<M>]: ReturnType<M>[k] & MostStream<any>
