@@ -29,12 +29,12 @@ describe('HTTP Driver in the browser', function() {
       next: function(response$) {
         assert.strictEqual(response$.request.url, uri + '/querystring');
         assert.strictEqual(response$.request.method, 'GET');
-        assert.strictEqual((response$.request.query as any).foo, 102030);
-        assert.strictEqual((response$.request.query as any).bar, 'Pub');
+        assert.strictEqual(response$.request.query.foo, 102030);
+        assert.strictEqual(response$.request.query.bar, 'Pub');
         let progressEventHappened = false;
         response$.subscribe(function(response) {
           if (response.type === 'progress') {
-            assert.strictEqual(typeof (response as any).total, 'number');
+            assert.strictEqual(typeof response.total, 'number');
             progressEventHappened = true;
           } else {
             assert.strictEqual(progressEventHappened, true);

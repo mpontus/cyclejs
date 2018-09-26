@@ -144,8 +144,8 @@ export function runTests(uri: string) {
       response$$.subscribe(function(response$) {
         assert.strictEqual(response$.request.url, uri + '/pet');
         assert.strictEqual(response$.request.method, 'POST');
-        assert.strictEqual((response$.request.send as any).name, 'Woof');
-        assert.strictEqual((response$.request.send as any).species, 'Dog');
+        assert.strictEqual(response$.request.send.name, 'Woof');
+        assert.strictEqual(response$.request.send.species, 'Dog');
         response$.subscribe(function(response: any) {
           assert.strictEqual(response.status, 200);
           assert.strictEqual(response.text, 'added Woof the Dog');
@@ -199,7 +199,7 @@ export function runTests(uri: string) {
       const {sources, run} = Cycle.setup(main, {HTTP: makeHTTPDriver()});
 
       const response$$ = sources.HTTP.select();
-      assert.strictEqual((response$$ as any)._isCycleSource, 'HTTP');
+      assert.strictEqual(response$$._isCycleSource, 'HTTP');
       done();
       run();
     });
@@ -218,7 +218,7 @@ export function runTests(uri: string) {
       const {sources, run} = Cycle.setup(main, {HTTP: makeHTTPDriver()});
 
       const response$$ = sources.HTTP.select();
-      assert.strictEqual((response$$ as any)._isCycleSource, 'HTTP');
+      assert.strictEqual(response$$._isCycleSource, 'HTTP');
       done();
       run();
     });
@@ -240,8 +240,8 @@ export function runTests(uri: string) {
       response$$.subscribe(function(response$) {
         assert.strictEqual(response$.request.url, uri + '/querystring');
         assert.strictEqual(response$.request.method, 'GET');
-        assert.strictEqual((response$.request.query as any).foo, 102030);
-        assert.strictEqual((response$.request.query as any).bar, 'Pub');
+        assert.strictEqual(response$.request.query.foo, 102030);
+        assert.strictEqual(response$.request.query.bar, 'Pub');
         response$.subscribe(function(response: any) {
           assert.strictEqual(response.status, 200);
           assert.strictEqual(response.body.foo, '102030');
