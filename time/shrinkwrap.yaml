@@ -1,5 +1,5 @@
 dependencies:
-  '@cycle/run': 5.0.0-rc.0
+  '@cycle/run': 5.0.0
   combine-errors: 3.0.3
   most: 1.7.3
   performance-now: 2.1.0
@@ -21,7 +21,7 @@ devDependencies:
   snabbdom-selector: 3.0.0
   ts-node: 7.0.0
   tslint: 5.11.0
-  typescript: 2.8.4
+  typescript: 3.0.3
 packages:
   /@cycle/dom/20.4.0:
     dependencies:
@@ -44,7 +44,7 @@ packages:
       node: '>=0.12.0'
     resolution:
       integrity: sha512-vVxnTqKKlgasE+we9X2z3og8z5KouO2RMiIgHWkVek+NomsdaeZwfvbutqzm3VToEImaz0DE2Iln9AxtCOVjpQ==
-  /@cycle/run/5.0.0-rc.0:
+  /@cycle/run/5.0.0:
     dependencies:
       quicktask: 1.1.0
       xstream: 11.7.0
@@ -52,7 +52,7 @@ packages:
     engines:
       node: '>=0.12.0'
     resolution:
-      integrity: sha512-aIH5JMw219EJmk6LSvZWmxWFayagfBrabWlAkMiNeIovczJQ64HoixbfkGcdkCQXiReHzpjipwksMhAgN9NlrQ==
+      integrity: sha512-wmFKO+X+NnO5Z7cFjT/YrqodDiEQOqrrRmQKjVNr3bOwam3/ryxWR2p67Ii8lj941ZvhKA9I2fOOBqjeklVnoA==
   /@cycle/rxjs-run/9.2.0:
     dependencies:
       '@cycle/run': 4.4.0
@@ -3413,13 +3413,13 @@ packages:
     dev: true
     resolution:
       integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-  /typescript/2.8.4:
+  /typescript/3.0.3:
     dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-IIU5cN1mR5J3z9jjdESJbnxikTrEz3lzAw/D0Tf45jHpBp55nY31UkUvmVHoffCfKHTqJs3fCLPDxknQTTFegQ==
+      integrity: sha512-kk80vLW9iGtjMnIv11qyxLqZm20UklzuR2tL0QAnDIygIUIemcZMxlMWudl9OOt76H3ntVzcTiddQ1/pAAJMYg==
   /uglify-js/2.8.29:
     dependencies:
       source-map: 0.5.7
@@ -3593,7 +3593,7 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@cycle/dom': '20.4'
-  '@cycle/run': ^5.0.0-rc.0
+  '@cycle/run': ^5.0.0
   '@cycle/rxjs-run': '9.2'
   '@types/mocha': 5.2.x
   '@types/node': 10.5.x
@@ -3611,6 +3611,6 @@ specifiers:
   sorted-immutable-list: 1.1.x
   ts-node: ^7.0.0
   tslint: ^5.11.0
-  typescript: 2.8.x
+  typescript: 3.0.x
   variable-diff: 1.1.x
   xstream: '*'

@@ -12,7 +12,7 @@
   "typings": "lib/cjs/index.d.ts",
   "types": "lib/cjs/index.d.ts",
   "dependencies": {
-    "@cycle/run": "^5.0.0-rc.0",
+    "@cycle/run": "^5.0.0",
     "combine-errors": "3.0.x",
     "most": "*",
     "performance-now": "^2.1.0",
