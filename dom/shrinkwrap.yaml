@@ -1,5 +1,5 @@
 dependencies:
-  '@cycle/run': 5.0.0-rc.0
+  '@cycle/run': 5.0.0
   snabbdom: 0.7.2
   snabbdom-selector: 3.0.0
   xstream: 11.7.0
@@ -49,7 +49,7 @@ packages:
       node: '>=0.12.0'
     resolution:
       integrity: sha512-vVxnTqKKlgasE+we9X2z3og8z5KouO2RMiIgHWkVek+NomsdaeZwfvbutqzm3VToEImaz0DE2Iln9AxtCOVjpQ==
-  /@cycle/run/5.0.0-rc.0:
+  /@cycle/run/5.0.0:
     dependencies:
       quicktask: 1.1.0
       xstream: 11.7.0
@@ -57,7 +57,7 @@ packages:
     engines:
       node: '>=0.12.0'
     resolution:
-      integrity: sha512-aIH5JMw219EJmk6LSvZWmxWFayagfBrabWlAkMiNeIovczJQ64HoixbfkGcdkCQXiReHzpjipwksMhAgN9NlrQ==
+      integrity: sha512-wmFKO+X+NnO5Z7cFjT/YrqodDiEQOqrrRmQKjVNr3bOwam3/ryxWR2p67Ii8lj941ZvhKA9I2fOOBqjeklVnoA==
   /@cycle/rxjs-run/9.2.0:
     dependencies:
       '@cycle/run': 4.4.0
@@ -3753,7 +3753,7 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@cycle/isolate': '3.4'
-  '@cycle/run': ^5.0.0-rc.0
+  '@cycle/run': ^5.0.0
   '@cycle/rxjs-run': 9.2.0
   '@types/mocha': ^5.2.5
   '@types/node': ^10.7.1
@@ -3780,5 +3780,5 @@ specifiers:
   symbol-observable: ^1.2.0
   ts-node: ^7.0.1
   tslint: ^5.11.0
-  typescript: ^3.0.3
+  typescript: 3.0.x
   xstream: '*'
