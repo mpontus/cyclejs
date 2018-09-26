@@ -885,7 +885,7 @@ describe('DOMSource.events()', function() {
       DOM: makeDOMDriver(createRenderTarget()),
     });
     const event$ = sources.DOM.select('.myelementclass').events('click');
-    assert.strictEqual((event$ as any)._isCycleSource, 'DOM');
+    assert.strictEqual(event$._isCycleSource, 'DOM');
     done();
   });
 
