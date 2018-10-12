@@ -135,7 +135,7 @@ function isolateAllSinks<So extends Sources, Si>(
 
 export type OuterSo<ISo> = {
   [K in keyof ISo]: ISo[K] extends IsolateableSource
-    ? FirstArg<IsolateableSource['isolateSource']>
+    ? any //FirstArg<IsolateableSource['isolateSource']>
     : ISo[K]
 };
 

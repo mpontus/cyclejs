@@ -1,10 +1,10 @@
 import xs, {Stream, MemoryStream} from 'xstream';
 import {adapt} from '@cycle/run/lib/adapt';
 import {DevToolEnabledSource} from '@cycle/run';
-import {DOMSource, EventsFnOptions} from './DOMSource';
+import {EventsFnOptions} from './DOMSource';
 import {fromEvent} from './fromEvent';
 
-export class BodyDOMSource implements DOMSource {
+export class BodyDOMSource {
   constructor(private _name: string) {}
 
   public select(selector: string): BodyDOMSource {
@@ -29,7 +29,8 @@ export class BodyDOMSource implements DOMSource {
 
   public events(
     eventType: string,
-    options: EventsFnOptions = {}
+    options: EventsFnOptions = {},
+    bubbles?: boolean
   ): Stream<Event> {
     let stream: Stream<Event>;
 

@@ -16,6 +16,7 @@ import {
   button,
   makeDOMDriver,
   DOMSource,
+  MainDOMSource,
 } from '../../src/index';
 
 function createRenderTarget(id: string | null = null) {
@@ -885,7 +886,7 @@ describe('DOMSource.events()', function() {
       DOM: makeDOMDriver(createRenderTarget()),
     });
     const event$ = sources.DOM.select('.myelementclass').events('click');
-    assert.strictEqual(event$._isCycleSource, 'DOM');
+    assert.strictEqual((event$ as any)._isCycleSource, 'DOM');
     done();
   });
 
@@ -893,7 +894,7 @@ describe('DOMSource.events()', function() {
     const outSubject = xs.create<any>();
     const switchSubject = xs.create<any>();
 
-    function component(_sources: {DOM: DOMSource}) {
+    function component(_sources: {DOM: MainDOMSource}) {
       const itemMouseDown$ = _sources.DOM.select('.item').events(
         'mousedown',
         {},

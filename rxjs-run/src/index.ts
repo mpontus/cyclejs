@@ -6,7 +6,7 @@ import {setAdapt} from '@cycle/run/lib/adapt';
 import {setup as coreSetup, DisposeFunction, Drivers, Main} from '@cycle/run';
 
 export type MainOutputs<M extends Main> = {
-  [k in string & keyof ReturnType<M>]: ReturnType<M>[k] & Observable<any>
+  [k in string & keyof ReturnType<M>]: ReturnType<M>[k]
 };
 
 export type DriverInputs<M extends Main> = {
